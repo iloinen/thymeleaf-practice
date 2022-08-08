@@ -23,6 +23,9 @@ public class TaskController {
 
     @GetMapping("/task3")
     public String task3(Model model) {
+        // Ha helyettesítjük az értékeket, akkor a Thymeleaf sablont
+        // közvetlenül a böngészőben megnyítva is érvényes HTML5 oldalt kapunk.
+        // Natural templates.
         // >        &gt;
         // <        &lt;
         BlogEntry blogEntry = new BlogEntry(
