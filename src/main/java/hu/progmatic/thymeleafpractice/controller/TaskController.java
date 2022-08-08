@@ -61,4 +61,9 @@ public class TaskController {
         return "task4";
     }
 
+    @GetMapping("/task5")
+    public String task5() {
+        return "task5";
+    }
+
 }
