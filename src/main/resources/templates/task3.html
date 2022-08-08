@@ -14,5 +14,6 @@
 <p data-th-text="${entry.content}"></p>
 <p data-th-if="${entry.published}">PUBLIKÁLVA</p>
 <p data-th-unless="${entry.published}"> NINCS PUBLIKÁLVA</p>
+<p data-th-if="${entry.rating &gt; 3}">EZ EGY JÓ CIKK</p>
 </body>
 </html>
