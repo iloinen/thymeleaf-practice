@@ -66,4 +66,19 @@ public class TaskController {
         return "task5";
     }
 
+    // TASK6: Legyen több bejegyzés (pl. List.of)
+    // Táblázatban jelenítsük meg valamennyi bejegyzés adatát.
+    // A publikált bejegyzések legyenek félkövér betűvel (style="font-weight: bold;").
+    // data-th-each / data-th-if + data-th-unless
+
+    // TASK7: Legyen egy űrlapunk, ahol meg tudjuk adni egy bejegyzés adatait.
+    // Hozzunk létre egy endpointot, ahova elküldjük az új bejegyzés adatát.
+    // A második endpointnál hozzunk létre egy task7_tostring.html-t,
+    // ahol egyszerűen megjelenítjük egy <span> elemen belül a létrehozott bejegyzést.
+    // @GetMapping + @PostMapping
+
+    // 2 endpoint + 2 view
+    // 1. endpoint megjeleníti az űrlapot
+    // 2. endpoint megjeleníti a toStringet
+
 }
