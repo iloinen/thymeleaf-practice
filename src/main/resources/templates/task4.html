@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<body>
+<h1 data-th-text="${'CÍM: ' + entry.title}"></h1>
+<h1>CÍM: <span data-th-text="${entry.title}"></span></h1>
+<p>Rating duplája: <span data-th-text="${entry.rating * 2}"></span></p>
+<p data-th-text="${entry.created}"></p>
+<p data-th-text="${#temporals.formatISO(entry.created)}"></p>
+<p data-th-text="${#temporals.format(entry.created, 'dd-MM-yyyy')}"></p>
+<p data-th-text="${#strings.toUpperCase(entry.content)}"></p>
+<p>Nevek száma: <span data-th-text="${#lists.size(names)}"></span></p>
+<p>Nevek:</p>
+<ul>
+    <li data-th-each="name: ${names}"><span data-th-text="${name}"></span></li>
+</ul>
+<p>Nevek:</p>
+<ol>
+    <li data-th-each="name: ${names}" data-th-text="${name}"></li>
+</ol>
+</body>
+</html>
