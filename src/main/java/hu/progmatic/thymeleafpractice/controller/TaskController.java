@@ -23,6 +23,9 @@ public class TaskController {
 
     @GetMapping("/task3")
     public String task3(Model model) {
+        // https://www.baeldung.com/spring-thymeleaf-conditionals
+        // https://www.baeldung.com/thymeleaf-boolean
+
         // Ha helyettesítjük az értékeket, akkor a Thymeleaf sablont
         // közvetlenül a böngészőben megnyítva is érvényes HTML5 oldalt kapunk.
         // Natural templates.
@@ -30,7 +33,7 @@ public class TaskController {
         // <        &lt;
         BlogEntry blogEntry = new BlogEntry(
                 "Title1", "Content1", "Python",
-                5, true, LocalDate.now()
+                6, true, LocalDate.now()
         );
         model.addAttribute("entry", blogEntry);
 

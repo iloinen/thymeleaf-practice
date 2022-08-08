@@ -15,5 +15,14 @@
 <p data-th-if="${entry.published}">PUBLIKÁLVA</p>
 <p data-th-unless="${entry.published}"> NINCS PUBLIKÁLVA</p>
 <p data-th-if="${entry.rating &gt; 3}">EZ EGY JÓ CIKK</p>
+<p data-th-switch="${entry.rating}">
+    <span data-th-case="1">ELÉGTELEN</span>
+    <span data-th-case="2">ELÉGSÉGES</span>
+    <span data-th-case="3">KÖZEPES</span>
+    <span data-th-case="4">JÓ</span>
+    <span data-th-case="5">JELES</span>
+    <span data-th-case="*">ISMERETLEN</span>
+</p>
+<p data-th-text="${entry.published ? ':)' : ':('}"></p>
 </body>
 </html>
