@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+<h1 data-th-text="${entry.title}"
+    data-th-if="${entry.category == 'Java'}"
+    style="background-color: black; color: white;"></h1>
+<h1 data-th-text="${entry.title}"
+    data-th-unless="${entry.category == 'Java'}"
+    style="background-color: pink; color: red;"></h1>
+<p data-th-text="${entry.content}"></p>
+<p data-th-if="${entry.published}">PUBLIKÁLVA</p>
+<p data-th-unless="${entry.published}"> NINCS PUBLIKÁLVA</p>
+</body>
+</html>

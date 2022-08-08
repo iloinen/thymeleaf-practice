@@ -21,4 +21,15 @@ public class TaskController {
         return "task1";
     }
 
+    @GetMapping("/task3")
+    public String task3(Model model) {
+        BlogEntry blogEntry = new BlogEntry(
+                "Title1", "Content1", "Python",
+                5, true, LocalDate.now()
+        );
+        model.addAttribute("entry", blogEntry);
+
+        return "task3";
+    }
+
 }
