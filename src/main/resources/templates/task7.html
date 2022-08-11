@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link data-th-href="@{/task5.css}" rel="stylesheet">
+</head>
+<body>
+
+<form data-th-action="@{/task7}" method="post" data-th-object="${blogEntry}">
+  <input type="text" data-th-field="*{title}" placeholder="Title" />
+  <br />
+  <br />
+  <input type="text" data-th-field="*{category}" placeholder="Category" />
+  <br />
+  <br />
+  <label>Rating</label>
+  <br />
+  <input type="number" data-th-field="*{rating}" />
+  <br />
+  <br />
+  <label>Published?</label>
+  <br />
+  <input type="text" data-th-field="*{published}" />
+  <br />
+  <br />
+  <textarea data-th-field="*{content}" placeholder="Content" cols="50" rows="5"></textarea>
+  <br />
+  <br />
+  <input type="date" data-th-field="*{stringDate}">
+  <br />
+  <br />
+  <input type="submit" value="DO NOT PUSH">
+</form>
+
+<p data-th-object="${savedEntry}">
+  <span data-th-if="${savedEntry} != null" data-th-text="${savedEntry}"></span>
+</p>
+
+</body>
+</html>

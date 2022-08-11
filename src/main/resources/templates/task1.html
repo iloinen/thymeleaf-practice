@@ -9,5 +9,12 @@
 <h2 data-th-text="${entry.title}"></h2>
 <p data-th-text="${entry.content}"></p>
 <p data-th-text="${entry}"></p>
+
+<!-- [1, 2, 3] -->
+<p data-th-each="valami : ${valamik}">
+    <!-- 123 -->
+    <span data-th-text="valami"></span>
+</p>
+
 </body>
 </html>

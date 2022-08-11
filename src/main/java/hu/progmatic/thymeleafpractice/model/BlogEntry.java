@@ -1,8 +1,16 @@
 package hu.progmatic.thymeleafpractice.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.time.LocalDate;
 
+@Entity
 public class BlogEntry {
+
+    @Id
+    @GeneratedValue
     private Long id;
 
     private String title;
@@ -16,6 +24,9 @@ public class BlogEntry {
     private boolean published;
 
     private LocalDate created;
+
+    @Transient
+    private String stringDate;
 
     public BlogEntry() {
     }
@@ -98,7 +109,19 @@ public class BlogEntry {
     }
 
     public void setCreated(LocalDate created) {
+        // 2022-01-14
+        // String format = "yyyy-MM-dd";
+        // LocalDate.parse(created);
+        //this.created = LocalDate.parse(created, DateTimeFormatter.ofPattern(format));
         this.created = created;
+    }
+
+    public String getStringDate() {
+        return stringDate;
+    }
+
+    public void setStringDate(String stringDate) {
+        this.stringDate = stringDate;
     }
 
     @Override

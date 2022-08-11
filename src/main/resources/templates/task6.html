@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link data-th-href="@{/task5.css}" rel="stylesheet">
+</head>
+
+<body>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Category</th>
+        <th>Rating</th>
+        <th>Published</th>
+        <th>Created</th>
+    </tr>
+    <tr data-th-each="entry : ${blogEntries}"
+        data-th-style="${entry.published ? 'font-weight:bold' : ''}">
+        <td data-th-text="${entry.title}"></td>
+        <td data-th-text="${entry.content}"></td>
+        <td data-th-text="${entry.category}"></td>
+        <td data-th-text="${entry.rating}"></td>
+        <td data-th-text="${entry.published}"></td>
+        <td data-th-text="${entry.created}"></td>
+    </tr>
+
+</table>
+
+</body>
+
+</html>
